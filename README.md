@@ -10,3 +10,9 @@
 
 ## 4. Templates
 
+## 5. Django Project Settings
+
+## 6. Mlsapp view
+
+## 7. Mlsapp urls
+
