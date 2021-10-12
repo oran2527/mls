@@ -1,6 +1,6 @@
 # mls
 
-# steps
+# Building Steps
 
 ## 1. Virtual Environment
 
@@ -17,4 +17,12 @@
 ## 7. Mlsapp urls
 
 ## 8. Mlsproject urls
+
+## 9. Base html
+
+## 10. Nav html
+
+
+
+
 
