@@ -1,10 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import DataForm
 
 # Create your views here.
 
 def index(request):
-    form = DataForm()
+    if request.method == 'POST':
+        form = DataForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('mlsapp-predictions')
+    else:
+        form = DataForm()
     context = {
         'form': form, 
     }
