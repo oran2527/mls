@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import DataForm
+from .models import Data
+
 
 # Create your views here.
 
@@ -17,4 +19,8 @@ def index(request):
     return render(request, 'mlsapp/index.html', context)
 
 def predictions(request):
-    return render(request, 'mlsapp/predictions.html')
+    predicted_sports = Data.objects.all()
+    context = {
+        'predicted_sports': predicted_sports  
+    }
+    return render(request, 'mlsapp/predictions.html', context)
